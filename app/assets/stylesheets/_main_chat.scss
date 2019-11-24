@@ -50,6 +50,7 @@
 
     .contents {
       @include flexColumn();
+      height: calc(100vh - 232px - 1px);
       padding: 46px 40px 0;
       border-top: solid 1px #eee;       
       background-color: #fafafa;
