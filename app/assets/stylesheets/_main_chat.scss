@@ -4,3 +4,8 @@
 .wrapper {
   @include flexRowBetween();
 
+  .main {
+    @include flexColumn();
+    height: 100%;
+    width: calc(100vw - 300px);
+
