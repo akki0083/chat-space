@@ -36,3 +36,14 @@
         margin: 28px 0 28px;
         border: solid 1px $mainBlueColor;
 
+        &__btn {
+          height: 100%;
+          width: 100%;
+          color: $mainBlueColor;
+          text-decoration: none;
+          text-align: center;
+          line-height: 40px;
+        }
+      }
+    }
+
