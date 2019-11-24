@@ -18,3 +18,9 @@
       &__left {
         @include flexColumn();
 
+        &__group-name {
+          margin: 35px 0 15px;
+          font-size: 20px;
+          color: #333;
+        }
+
