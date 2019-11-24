@@ -131,3 +131,14 @@
         }
       }
 
+      &__submit {
+        margin: 20px 40px 20px 0;
+        padding: 0 30px;
+        background-color: $mainBlueColor;
+        color: #FFF;
+        text-decoration: none;
+        line-height: 50px;
+      }
+    }
+  }
+}
