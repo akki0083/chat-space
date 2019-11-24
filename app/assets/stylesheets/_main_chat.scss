@@ -48,3 +48,9 @@
       }
     }
 
+    .contents {
+      @include flexColumn();
+      padding: 46px 40px 0;
+      border-top: solid 1px #eee;       
+      background-color: #fafafa;
+
