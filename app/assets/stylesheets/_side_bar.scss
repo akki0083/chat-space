@@ -60,3 +60,6 @@
       }
     }
 
+    &__group2 {
+      @include flexColumn();
+
