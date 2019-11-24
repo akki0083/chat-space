@@ -107,3 +107,10 @@
         height: 90px;
         background-color: #ddd;
 
+      &__message {
+        height: 50px;
+        width: 100%;
+        font-size: 16px;
+        color: $textMainGrayColor;
+        border: none;
+
