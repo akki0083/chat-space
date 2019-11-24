@@ -34,8 +34,9 @@
 
         &__btn {
           display: block;
-          width: 100%;
           height: 38px;
+          margin: 28px auto;
+          padding: 0 20px;
           color: $mainBlueColor;
           text-decoration: none;
           text-align: center;
