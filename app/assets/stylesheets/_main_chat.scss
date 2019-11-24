@@ -78,3 +78,27 @@
         color: $textMainGrayColor;
       }
 
+      &__log2 {
+        @include flexRowStart();
+        margin-bottom: 10px;
+
+        &__name2 {
+          font-size: 16px;
+          font-weight: bold;
+          color: $textMainGrayColor;
+        }
+
+        &__time2 {
+          font-size: 12px;
+          margin-left: 10px;
+          color: #999;
+        }
+      }
+
+      &__message2 {
+        margin-bottom: 40px;
+        font-size: 14px;
+        color: $textMainGrayColor;
+      }   
+    }
+
