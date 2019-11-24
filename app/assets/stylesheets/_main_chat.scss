@@ -14,3 +14,7 @@
       height: 96px;
       width: calc(100% - 80px);
       padding: 0 40px;
+
+      &__left {
+        @include flexColumn();
+
