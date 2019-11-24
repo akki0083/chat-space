@@ -3,3 +3,8 @@
   flex-direction: column;
 }
 
+@mixin flexRowBetween() {
+  display: flex;
+  justify-content: space-between;
+}
+
