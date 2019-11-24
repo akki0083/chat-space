@@ -102,3 +102,8 @@
       }   
     }
 
+    .footer {
+        @include flexRowBetween();
+        height: 90px;
+        background-color: #ddd;
+
