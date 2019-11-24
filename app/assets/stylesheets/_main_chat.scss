@@ -55,3 +55,7 @@
       border-top: solid 1px #eee;       
       background-color: #fafafa;
 
+      &__log1 {
+        @include flexRowStart();
+        margin-bottom: 10px;
+
