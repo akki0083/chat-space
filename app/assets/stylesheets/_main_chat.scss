@@ -1,0 +1,145 @@
+@import "mixin/flexbox";
+@import "config/color";
+
+.wrapper {
+  @include flexRowBetween();
+
+  .main {
+    @include flexColumn();
+    height: 100%;
+    width: calc(100vw - 300px);
+
+    .header {
+      @include flexRowBetween();
+      height: 96px;
+      width: calc(100% - 80px);
+      padding: 0 40px;
+
+      &__left {
+        @include flexColumn();
+
+        &__group-name {
+          margin: 35px 0 15px;
+          font-size: 20px;
+          color: #333;
+        }
+
+        &__member {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+
+      &__right {
+
+        &__btn {
+          display: block;
+          height: 38px;
+          margin: 28px auto;
+          padding: 0 20px;
+          color: $mainBlueColor;
+          text-decoration: none;
+          text-align: center;
+          line-height: 38px;
+          border: solid 1px $mainBlueColor;
+        }
+      }
+    }
+
+    .contents {
+      @include flexColumn();
+      height: calc(100vh - 232px - 1px);
+      padding: 46px 40px 0;
+      border-top: solid 1px #eee;       
+      background-color: #fafafa;
+
+      &__log1 {
+        @include flexRowStart();
+        margin-bottom: 10px;
+
+        &__name {
+          font-size: 16px;
+          font-weight: bold;
+          color: $textMainGrayColor;
+        }
+
+        &__time {
+          font-size: 12px;
+          margin-left: 10px;
+          color: #999;
+        }
+      }
+
+      &__message1 {
+        margin-bottom: 40px;
+        font-size: 14px;
+        color: $textMainGrayColor;
+      }
+
+      &__log2 {
+        @include flexRowStart();
+        margin-bottom: 10px;
+
+        &__name2 {
+          font-size: 16px;
+          font-weight: bold;
+          color: $textMainGrayColor;
+        }
+
+        &__time2 {
+          font-size: 12px;
+          margin-left: 10px;
+          color: #999;
+        }
+      }
+
+      &__message2 {
+        margin-bottom: 40px;
+        font-size: 14px;
+        color: $textMainGrayColor;
+      }   
+    }
+
+    .footer {
+        @include flexRowBetween();
+        height: 90px;
+        background-color: #ddd;
+
+      &__message {
+        height: 50px;
+        width: 100%;
+        margin: auto 15px auto 40px;
+        padding: 0 41.34px 0 10px;
+        font-size: 16px;
+        color: $textMainGrayColor;
+        border: none;
+
+        &__image {
+
+          &__icon {
+            position: absolute;
+            right: calc(100.34px + 40px + 15px + 10px);
+            bottom: calc(20px + 25px - 10px);
+            color: black;
+          }
+          &__btn {
+            display: none;
+          }
+        }
+      }
+
+      &__submit {
+        display: block;
+        height: 50px;
+        margin: 20px 40px 20px 0;
+        padding: 0 30px;
+        background-color: $mainBlueColor;
+        color: #FFF;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        border: none;
+      }
+    }
+  }
+}
