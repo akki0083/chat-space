@@ -1,5 +1,5 @@
 @import "mixin/flexbox";
-@import "config/color";
+@import "config/colors";
 
 .wrapper {
   @include flexRowBetween();
