@@ -8,13 +8,10 @@
       = link_to edit_user_path(current_user.id), class: "sidebar__top__right__cog-btn" do
         = icon('fas', 'cog', class: "sidebar__top__right__cog-btn__icon")
   .sidebar__main
-    .sidebar__main__group1
-      .sidebar__main__group1__name
-        group1 name
-      .sidebar__main__group1__message
-        group1 message
-    .sideber__main__group2
-      .sidebar__main__group2__name
-        group2 name
-      .sidebar__main__group2__message
-        group2 message
+    - current_user.groups.each do |group|
+      .sidebar__main__group1
+        = link_to '#' do
+          .sidebar__main__group1__name
+            = group.name
+          .sidebar__main__group1__message
+            メッセージはまだありせん。
