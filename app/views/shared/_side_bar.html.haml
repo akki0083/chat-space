@@ -10,7 +10,7 @@
   .sidebar__main
     - current_user.groups.each do |group|
       .sidebar__main__group1
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .sidebar__main__group1__name
             = group.name
           .sidebar__main__group1__message
