@@ -9,9 +9,9 @@
         = icon('fas', 'cog', class: "sidebar__top__right__cog-btn__icon")
   .sidebar__main
     - current_user.groups.each do |group|
-      .sidebar__main__group1
+      .sidebar__main__group
         = link_to group_messages_path(group) do
-          .sidebar__main__group1__name
+          .sidebar__main__group__name
             = group.name
-          .sidebar__main__group1__message
-            メッセージはまだありせん。
+          .sidebar__main__group__message
+            = group.show_last_message

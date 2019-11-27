@@ -48,13 +48,15 @@
 
     .contents {
       @include flexColumn();
-      height: calc(100vh - 232px - 1px);
-      padding: 46px 40px 0;
+      height: calc(100vh - 192px - 1px);
+      padding: 6px 40px 0;
       border-top: solid 1px #eee;       
       background-color: #fafafa;
 
-      &__log1 {
+
+      &__log {
         @include flexRowStart();
+        margin-top: 40px;
         margin-bottom: 10px;
 
         &__name {
@@ -70,76 +72,63 @@
         }
       }
 
-      &__message1 {
-        margin-bottom: 40px;
+      &__message {
         font-size: 14px;
         color: $textMainGrayColor;
-      }
-
-      &__log2 {
-        @include flexRowStart();
-        margin-bottom: 10px;
-
-        &__name2 {
-          font-size: 16px;
-          font-weight: bold;
-          color: $textMainGrayColor;
-        }
-
-        &__time2 {
-          font-size: 12px;
-          margin-left: 10px;
-          color: #999;
-        }
-      }
-
-      &__message2 {
-        margin-bottom: 40px;
-        font-size: 14px;
-        color: $textMainGrayColor;
-      }   
+      }  
+    
     }
 
     .footer {
-        @include flexRowBetween();
         height: 90px;
         background-color: #ddd;
+        position: relative;
 
-      &__message {
-        height: 50px;
-        width: 100%;
-        margin: auto 15px auto 40px;
-        padding: 0 41.34px 0 10px;
-        font-size: 16px;
-        color: $textMainGrayColor;
-        border: none;
+        &--flex {
+          @include flexRowBetween();
 
-        &__image {
-
-          &__icon {
-            position: absolute;
-            right: calc(100.34px + 40px + 15px + 10px);
-            bottom: calc(20px + 25px - 10px);
-            color: black;
+          &__message {
+            height: 50px;
+            width: 100%;
+            margin: 20px 15px 20px 40px;
+            padding: 0 41.34px 0 10px;
+            font-size: 16px;
+            color: $textMainGrayColor;
+            border: none;
           }
-          &__btn {
-            display: none;
+
+          &__image {
+            
+            &__icon {
+
+              position: absolute;
+              right: calc(100.34px + 40px + 15px + 10px);
+              bottom: calc(20px + 25px - 10px);
+              color: black;
+              display: block;
+            }
+
+            &__btn {
+              display: none;
+            }
+          }
+          
+
+          &__submit {
+            display: block;
+            height: 50px;
+            margin: 20px 40px 20px 0;
+            padding: 0 30px;
+            background-color: $mainBlueColor;
+            color: #FFF;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            border: none;
           }
         }
-      }
-
-      &__submit {
-        display: block;
-        height: 50px;
-        margin: 20px 40px 20px 0;
-        padding: 0 30px;
-        background-color: $mainBlueColor;
-        color: #FFF;
-        text-decoration: none;
-        text-align: center;
-        line-height: 50px;
-        border: none;
-      }
     }
   }
 }
+
+

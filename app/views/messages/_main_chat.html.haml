@@ -1,0 +1,22 @@
+.main
+  .header
+    .header__left
+      .header__left__group-name
+        = @group.name
+      .header__left__member
+        Member :
+        - @group.users.each do |user|
+          = user.name
+    .header__right
+      = link_to edit_group_path(@group.id), class: "header__right__btn" do
+        Edit
+  .contents
+    = render partial: 'message', collection: @messages
+  .footer
+    = form_for [@group, @message] do |f|
+      .footer--flex
+        = f.text_field :content, class: "footer--flex__message",  placeholder: "type a message"
+        = f.label :image, class: "footer--flex__image" do
+          = icon('far fa-lg', 'image', class: 'footer--flex__image__icon')
+          = f.file_field :image, class: "footer--flex__image__btn"
+        = f.submit 'Send', class: 'footer--flex__submit'

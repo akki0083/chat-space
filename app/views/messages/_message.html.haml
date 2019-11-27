@@ -1,0 +1,9 @@
+.contents__log
+  .contents__log__name
+    = message.user.name
+  .contents__log__time
+    = message.updated_at.strftime("%Y/%m/%d %H:%M")
+- if message.content.present?
+  %p.contents__message
+    = message.content
+= image_tag message.image.url, class: 'contents__image' if message.image.present?

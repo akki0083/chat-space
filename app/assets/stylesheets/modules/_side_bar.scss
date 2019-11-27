@@ -42,7 +42,7 @@
     padding: 0 20px;
     background-color: #2f3e51;
 
-    &__group1 {
+    &__group {
       @include flexColumn();
 
       &__name {
