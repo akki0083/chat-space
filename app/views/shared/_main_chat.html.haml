@@ -9,23 +9,17 @@
       = link_to "#", class: "header__right__btn" do
         Edit
   .contents
-    .contents__log1
-      .contents__log1__name
-        name１
-      .contents__log1__time
-        2019/11/08/19:14:39 time1
-    .contents__message1
-      message1
-    .contents__log2
-      .contents__log2__name2
-        name2
-      .contents__log2__time2
-        2019/11/28/12:00:22 time2
-    .contents__message2
-      message2
+    .contents__log
+      .contents__log__name
+        -# name１
+      .contents__log__time
+        -# 2019/11/08/19:14:39 time1
+    %p.contents__message
+      -# message1
   .footer
-    %input{class: "footer__message", type: "text", name: "body", placeholder: "type a message"}
-      %label{class: ".footer__massage__image"}
-        = icon('far fa-lg', 'image', class: "footer__message__image__icon")
-        %input{class: "footer__message__image__btn", type: "file", accept: "image", name: "image"}       
-    %input{class: "footer__submit", type: "submit", value: "Send"}
+    .footer--flex
+      %input{class: "footer--flex__message", type: "text", name: "body", placeholder: "type a message"}
+        %label{class: ".footer--flex__message__image"}
+          = icon('far fa-lg', 'image', class: "footer--flex__message__image__icon")
+          %input{class: "footer--flex__message__image__btn", type: "file", accept: "image", name: "image"}       
+      %input{class: "footer--flex__submit", type: "submit", value: "Send"}
