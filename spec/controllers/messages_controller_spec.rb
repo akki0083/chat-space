@@ -42,6 +42,7 @@ describe MessagesController do
       before do
         login user
       end
+      context 'can save' do
         end
       end
   end
