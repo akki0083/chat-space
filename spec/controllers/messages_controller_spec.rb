@@ -1,3 +1,8 @@
+describe MessagesController do
+  let(:group) { create(:group) }
+  let(:user) { create(:user) }
+  
+  describe '#index' do
     context 'log in' do
       before do
         login user
@@ -17,6 +22,7 @@
       end
 
     end
+
     context 'not log in' do
       before do
         get :index, params: { group_id: group.id }
@@ -26,3 +32,4 @@
         expect(response).to redirect_to(new_user_session_path)
       end
     end
+  end
