@@ -17,3 +17,8 @@
       end
 
     end
+    context 'not log in' do
+      before do
+        get :index, params: { group_id: group.id }
+      end
+    end
