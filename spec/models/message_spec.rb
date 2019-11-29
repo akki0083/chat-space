@@ -17,3 +17,8 @@
         message.valid?
         expect(message.errors[:content]).to include("を入力してください")
       end
+      it 'is invalid without group_id' do
+        message = build(:message, group_id: nil)
+        message.valid?
+        expect(message.errors[:group]).to include('を入力してください')
+      end
