@@ -1,3 +1,6 @@
+require 'rails_helper'
+
+
 describe MessagesController do
   let(:group) { create(:group) }
   let(:user) { create(:user) }
@@ -42,6 +45,7 @@ describe MessagesController do
       before do
         login user
       end
+
       context 'can save' do
 
         subject {
@@ -74,6 +78,12 @@ describe MessagesController do
             subject
             expect(response).to render_template :index
           end
+
+      end
+    end
+
+
+
     context 'not log in' do
 
       it 'redirects to new_user_session_path' do
@@ -82,3 +92,4 @@ describe MessagesController do
       end
     end
   end
+end
