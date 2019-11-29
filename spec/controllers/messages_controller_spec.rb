@@ -12,4 +12,8 @@
         expect(assigns(:group)).to eq group
       end
 
+      it 'renders index' do
+        expect(response).to render_template :index
+      end
+
     end
