@@ -48,6 +48,11 @@ describe MessagesController do
           post :create,
           params: params
         }
+
+        it 'count up message' do
+          expect{ subject }.to change(Message, :count).by(1)
+        end
+
         end
       end
   end
