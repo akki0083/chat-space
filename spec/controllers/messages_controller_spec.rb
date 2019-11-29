@@ -39,5 +39,9 @@ describe MessagesController do
 
     context 'log in' do
 
+      before do
+        login user
+      end
+        end
       end
   end
