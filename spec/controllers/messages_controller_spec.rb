@@ -43,6 +43,11 @@ describe MessagesController do
         login user
       end
       context 'can save' do
+
+        subject {
+          post :create,
+          params: params
+        }
         end
       end
   end
