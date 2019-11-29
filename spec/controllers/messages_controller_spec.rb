@@ -60,5 +60,10 @@ describe MessagesController do
       end
 
       context 'can not save' do
+        let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
+          subject {
+            post :create,
+            params: invalid_params
+          }
     end
   end
