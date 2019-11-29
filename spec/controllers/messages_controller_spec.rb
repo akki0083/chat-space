@@ -74,5 +74,7 @@ describe MessagesController do
             subject
             expect(response).to render_template :index
           end
+    context 'not log in' do
+      end
     end
   end
