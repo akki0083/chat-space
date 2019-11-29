@@ -1,3 +1,6 @@
+require 'rails_helper'
+describe User do
+  describe '#create' do
     context 'can save' do
 
       # テキストと画像があれば保存できる
@@ -36,3 +39,5 @@
         expect(message.errors[:user]).to include('を入力してください')
       end
     end
+  end
+end
