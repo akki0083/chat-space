@@ -8,4 +8,8 @@
         expect(assigns(:message)).to be_a_new(Message)
       end
 
+      it 'assigns @group' do
+        expect(assigns(:group)).to eq group
+      end
+
     end
