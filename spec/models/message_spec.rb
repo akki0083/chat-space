@@ -11,3 +11,9 @@
         expect(build(:message, image: nil)).to be_valid
       end
     end
+      # テキストと画像がないと保存できない
+      it "is invalid without a content and image" do
+        message = build(:message, content: nil, image: nil)
+        message.valid?
+        expect(message.errors[:content]).to include("を入力してください")
+      end
