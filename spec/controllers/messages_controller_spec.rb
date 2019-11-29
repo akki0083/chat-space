@@ -58,4 +58,7 @@ describe MessagesController do
           expect(response).to redirect_to(group_messages_path(group))
         end
       end
+
+      context 'can not save' do
+    end
   end
