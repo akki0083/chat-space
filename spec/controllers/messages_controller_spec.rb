@@ -65,5 +65,10 @@ describe MessagesController do
             post :create,
             params: invalid_params
           }
+
+          it 'does not count up' do
+            expect{ subject }.not_to change(Message, :count)
+          end
+
     end
   end
