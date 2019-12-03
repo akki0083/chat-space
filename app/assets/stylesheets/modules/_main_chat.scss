@@ -52,7 +52,7 @@
       padding: 6px 40px 0;
       border-top: solid 1px #eee;       
       background-color: #fafafa;
-
+      overflow: auto;
 
       &__log {
         @include flexRowStart();
