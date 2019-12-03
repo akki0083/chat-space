@@ -16,6 +16,7 @@ $(function() {
     } else {
       var html = `<div class="contents__log">
                    <div class="contents__log__name">
+    var img = message.image ? `<img class="contents__image" src=${message.image.url}>` : "";
                     ${message.name}
                    </div>
                    <div class="contents__log__time">
