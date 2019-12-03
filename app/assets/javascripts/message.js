@@ -48,6 +48,7 @@ $(function(){
       $('.contents').animate({ scrollTop: $('.contents')[0].scrollHeight} ); 
       $('#message_content').val('');
       $('#new_message')[0].reset();
+      $(".footer--flex__submit").removeAttr("disabled");
     })
   });
 });
