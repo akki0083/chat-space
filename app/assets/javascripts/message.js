@@ -46,6 +46,7 @@ $(function(){
       var html = buildHTML(message);
       $('.contents').append(html);
       $('.contents').animate({ scrollTop: $('.contents')[0].scrollHeight} ); 
+      $('#message_content').val('');
     })
   });
 });
