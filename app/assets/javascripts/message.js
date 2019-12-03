@@ -27,6 +27,7 @@ $(function() {
                     ${message.content}
                   </p>`
     };
+                 ${img}`
     return html;
   };
 
