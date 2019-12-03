@@ -42,10 +42,11 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   # gem 'capybara'
+  gem 'faker'
 end
 
 group :test do
-  gem 'faker'
+  # gem 'faker'
 end
 
 group :development do
