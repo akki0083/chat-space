@@ -44,6 +44,7 @@ $(function(){
     })
     .done(function(message){
       var html = buildHTML(message);
+      $('.contents').append(html);
     })
   });
 });
