@@ -52,7 +52,7 @@
       padding: 6px 40px 0;
       border-top: solid 1px #eee;       
       background-color: #fafafa;
-
+      overflow: auto;
 
       &__log {
         @include flexRowStart();
@@ -100,7 +100,6 @@
           &__image {
             
             &__icon {
-
               position: absolute;
               right: calc(100.34px + 40px + 15px + 10px);
               bottom: calc(20px + 25px - 10px);
@@ -113,7 +112,6 @@
             }
           }
           
-
           &__submit {
             display: block;
             height: 50px;
