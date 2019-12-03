@@ -49,6 +49,8 @@ $(function(){
       $('#message_content').val('');
       $('#new_message')[0].reset();
       $(".footer--flex__submit").removeAttr("disabled");
+    .fail(function(){
+      alert("メッセージ送信に失敗しました");
     })
   });
 });
