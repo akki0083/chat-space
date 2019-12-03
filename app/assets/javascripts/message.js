@@ -1,8 +1,7 @@
-$(function(){
-  function buildHTML(message){
+$(function() {
+  function buildHTML(message) {
     if (message.image.url) {
-      var html = `
-                  <div class="contents__log">
+      var html = `<div class="contents__log">
                     <div class="contents__log__name">
                       ${message.name}
                     </div>
@@ -15,8 +14,7 @@ $(function(){
                     </p>
                   <img class="contents__image" src=${message.image.url}>`
     } else {
-      var html = `
-                  <div class="contents__log">
+      var html = `<div class="contents__log">
                    <div class="contents__log__name">
                     ${message.name}
                    </div>
@@ -30,10 +28,12 @@ $(function(){
     };
     return html;
   };
-  $("#new_message").on('submit', function(e){
+
+  $("#new_message").on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+
     $.ajax({
       url: url,
       type: 'POST',
@@ -42,14 +42,15 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(message){
+    .done(function(message) {
       var html = buildHTML(message);
       $('.contents').append(html);
-      $('.contents').animate({ scrollTop: $('.contents')[0].scrollHeight} ); 
+      $('.contents').animate( { scrollTop: $('.contents')[0].scrollHeight} ); 
       $('#message_content').val('');
       $('#new_message')[0].reset();
       $(".footer--flex__submit").removeAttr("disabled");
-    .fail(function(){
+    })
+    .fail(function() {
       alert("メッセージ送信に失敗しました");
     })
   });
