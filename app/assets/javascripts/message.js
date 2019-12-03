@@ -43,6 +43,7 @@ $(function(){
       contentType: false
     })
     .done(function(message){
+      var html = buildHTML(message);
     })
   });
 });
