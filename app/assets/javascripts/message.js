@@ -14,6 +14,20 @@ $(function(){
                       ${message.content}
                     </p>
                   <img class="contents__image" src=${message.image.url}>`
+    } else {
+      var html = `
+                  <div class="contents__log">
+                   <div class="contents__log__name">
+                    ${message.name}
+                   </div>
+                   <div class="contents__log__time">
+                   ${message.time}
+                  </div>
+                  </div>
+                  <p class="contents__message">
+                    ${message.content}
+                  </p>`
+    };
   };
   $("#new_message").on('submit', function(e){
     e.preventDefault();
