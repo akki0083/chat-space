@@ -28,6 +28,7 @@ $(function(){
                     ${message.content}
                   </p>`
     };
+    return html;
   };
   $("#new_message").on('submit', function(e){
     e.preventDefault();
