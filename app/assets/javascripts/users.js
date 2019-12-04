@@ -28,6 +28,11 @@ $(function(){
     $(".js-append-user").append(html);
   }
 
+  function appendMember(id) {
+    let html = `<input value="${id}" name="group[user_ids][]" type="hidden" id="group_user_ids_${id}" />`;
+    $(`#${id}`).append(html);
+  }  
+
   $('#user-search-field').on('keyup', function(){
     var input = $('#user-search-field').val();
 
