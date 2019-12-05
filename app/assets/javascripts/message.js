@@ -40,6 +40,8 @@ $(function() {
       alert("メッセージ送信に失敗しました");
     })
   });
+
+  if(location.href.match(/groups.+messages/)){
     var reloadMessages = function() {
     var last_message_id = $('.contents__content:last').data('message-id');
     var url = location.href.replace('http://localhost:3000','').replace('/messages', '/api/messages');
@@ -68,5 +70,6 @@ $(function() {
         console.log('error');
       });
     };
+  };
   setInterval(reloadMessages, 7000);
 });
