@@ -42,7 +42,7 @@ $(function() {
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-    })
+    });
   });
 
   if(location.href.match(/groups.+messages/)){
