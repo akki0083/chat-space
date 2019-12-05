@@ -50,5 +50,7 @@ $(function() {
         dataType: 'json',
         data: {id: last_message_id}
       })
+      .done(function(messages) {
+      })
     };
 });
