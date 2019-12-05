@@ -4,6 +4,7 @@ $(function() {
     var html  = `<div class="contents__log">
                   <div class="contents__log__name">
                     ${message.name}
+                <div class="contents__content" data-message-id="${message.id}">
                   </div>
                   <div class="contents__log__time">
                     ${message.time}
