@@ -64,5 +64,8 @@ $(function() {
           $('.contents').animate( { scrollTop: $('.contents')[0].scrollHeight} );
         };
       })
+      .fail(function() {
+        console.log('error');
+      });
     };
 });
