@@ -60,6 +60,9 @@ $(function() {
         $('.contents').append(insertHTML);
         var new_last_message_id = $('.contents__content:last').data('message-id');
 
+        if(last_message_id < new_last_message_id){
+          $('.contents').animate( { scrollTop: $('.contents')[0].scrollHeight} );
+        };
       })
     };
 });
