@@ -42,5 +42,6 @@ $(function() {
   });
     var reloadMessages = function() {
     var last_message_id = $('.contents__content:last').data('message-id');
+    var url = location.href.replace('http://localhost:3000','').replace('/messages', '/api/messages');
     };
 });
