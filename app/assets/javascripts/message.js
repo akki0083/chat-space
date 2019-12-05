@@ -58,6 +58,8 @@ $(function() {
         });
 
         $('.contents').append(insertHTML);
+        var new_last_message_id = $('.contents__content:last').data('message-id');
+
       })
     };
 });
