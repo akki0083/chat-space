@@ -68,4 +68,5 @@ $(function() {
         console.log('error');
       });
     };
+  setInterval(reloadMessages, 7000);
 });
