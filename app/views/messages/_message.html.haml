@@ -7,3 +7,4 @@
   %p.contents__message
     = message.content
 = image_tag message.image.url, class: 'contents__image' if message.image.present?
+.contents__content{"data-message-id": "#{message.id}"}
