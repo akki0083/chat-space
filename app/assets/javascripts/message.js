@@ -40,5 +40,7 @@ $(function() {
       alert("メッセージ送信に失敗しました");
     })
   });
+    var reloadMessages = function() {
     var last_message_id = $('.contents__content:last').data('message-id');
+    };
 });
