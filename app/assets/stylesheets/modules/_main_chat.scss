@@ -64,6 +64,8 @@
           font-weight: bold;
           color: $textMainGrayColor;
         }
+      &__content {
+        @include flexColumn();
 
         &__time {
           font-size: 12px;
