@@ -56,6 +56,8 @@ $(function() {
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
+
+        $('.contents').append(insertHTML);
       })
     };
 });
