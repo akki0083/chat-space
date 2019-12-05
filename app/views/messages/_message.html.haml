@@ -1,9 +1,10 @@
-.contents__log
-  .contents__log__name
-    = message.user.name
-  .contents__log__time
-    = message.updated_at.strftime("%Y/%m/%d(%a) %H:%M")
-- if message.content.present?
-  %p.contents__message
-    = message.content
-= image_tag message.image.url, class: 'contents__image' if message.image.present?
+.contents__content{"data-message-id": "#{message.id}"}
+  .contents__content__log
+    .contents__content__log__name
+      = message.user.name
+    .contents__content__log__time
+      = message.updated_at.strftime("%Y/%m/%d(%a) %H:%M")
+  - if message.content.present?
+    %p.contents__content__message
+      = message.content
+  = image_tag message.image.url, class: 'contents__content__image' if message.image.present?
